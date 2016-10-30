@@ -1,0 +1,17 @@
+{include file="../application/index/view/public/header.html" /}
+<div class="main">
+	<div class="newsinfo">
+		<h2>{$newsinfo.news_title}</h2>
+		<div class="subtitle">
+			<span>{$newsinfo.cat_name}</span>
+			<span>{$newsinfo.news_publish_time}</span>
+			<span><a href="{$newsinfo.news_soucelink}" target="_blank">{$newsinfo.news_souce}</a></span>
+			<span>{$newsinfo.editor_id}</span>
+		</div>
+		<hr />
+		<div class="newscontent">
+			{$newsinfo.news_content}
+		</div>
+	</div>
+</div>
+{include file="../application/index/view/public/footer.html" /}

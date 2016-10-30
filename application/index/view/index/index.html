@@ -1,0 +1,29 @@
+{include file="../application/index/view/public/header.html" /}
+<div class="main">
+	<div style="padding:20px; box-sizing: border-box; width:100%; max-width:1000px; background-color: #fff; margin:20px auto;">
+		<table class="table table-bordered mytable">
+			<thead>
+				<td>新闻ID</td>
+				<td>新闻标题</td>
+				<td>新闻类别</td>
+				<td>新闻来源</td>
+				<td>新闻作者</td>
+				<td>操作</td>
+			</thead>
+			{volist name="newslist" id="vo"}
+			<tr>
+				<td>{$vo.news_id}</td>
+				<td><a href="http://localhost/index/index/newsinfo/id/{$vo.news_id}">{$vo.news_title}</a></td>
+				<td>{$vo.cat_name}</td>
+				<td>{$vo.news_souce}</td>
+				<td>{$vo.editor_id}</td>
+				<td>
+					<a href="#">编辑</a>
+					<a href="#">删除</a>
+				</td>
+			</tr>
+			{/volist}
+		</table>
+	</div>
+</div>
+{include file="../application/index/view/public/footer.html" /}
